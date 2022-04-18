@@ -43,10 +43,7 @@
             from_port: 443
             to_port: 443
             cidr_ip: "{{ my_ip}}"
-          - proto: tcp
-            from_port: 22
-            to_port: 22
-            cidr_ip: "{{my_ip}}"
+
       register: lb_sg_out
 
     - name:  vprofile_app_sg
@@ -63,10 +60,7 @@
             from_port: 22
             to_port: 22
             group_id: "{{bastion_sg.group_id}}"
-          - proto: tcp
-            from_port: 22
-            to_port: 22
-            cidr_ip: "{{my_ip}}"
+
 
       register: vprofile_app_sg_out
 
@@ -84,10 +78,7 @@
             from_port: 22
             to_port: 22
             group_id: "{{bastion_sg.group_id}}"
-          - proto: tcp
-            from_port: 22
-            to_port: 22
-            cidr_ip: "{{my_ip}}"
+
 
       register: vprofile_backend_sg_out
     - name: all traffic allow internally in backend group
