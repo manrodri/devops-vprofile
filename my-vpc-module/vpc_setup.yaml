@@ -153,5 +153,5 @@
         cachable: yes
     - name: copy facts to a file
       copy:
-        content: "vpc_id: {{ vpcout.vpc.id }}\npublic_subnet_1_id: {{ pubsub1_out.subnet.id }}\npublic_subnet_2_id: {{ pubsub2_out.subnet.id }}\npublic_subnet_3_id: {{ pubsub3_out.subnet.id }}"
+        content: "region: {{region}}\nvpc_id: {{ vpcout.vpc.id }}\npublic_subnet_1_id: {{ pubsub1_out.subnet.id }}\npublic_subnet_2_id: {{ pubsub2_out.subnet.id }}\npublic_subnet_3_id: {{ pubsub3_out.subnet.id }}\nprivsub1id: {{ privsub1_out.subnet.id }}\nprivsub2id: {{ privsub2_out.subnet.id }}"
         dest: vars/output_vars

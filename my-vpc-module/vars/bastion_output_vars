@@ -1,0 +1,2 @@
+bastion_ip: 34.240.103.242
+connection string: ssh -i ./sample-key.pem ec2-user@34.240.103.242

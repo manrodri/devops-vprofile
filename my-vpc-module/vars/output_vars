@@ -1,0 +1,12 @@
+region: eu-west-1
+vpc_id: vpc-03c873d2e3402e54e
+public_subnet_1_id: subnet-009d592e038a978b8
+public_subnet_2_id: subnet-04f57eae081721510
+public_subnet_3_id: subnet-04a698411b5e19a01
+privsub1id: subnet-02c9ef63359fd7755
+privsub2id: subnet-011dbabeb5bd3c064# BEGIN ANSIBLE MANAGED BLOCK
+bastion_sg_id: "sg-05e4c8994c8400290"
+lb_sg_id:  "sg-0419c881ba5bc594a"
+backend_sg_id: "sg-03cb4c8acd787ddc2"
+vprofile_app_sg_out: "{'changed': False, 'description': 'vprofile_app_sg', 'group_name': 'vprofile_app_sg', 'ip_permissions': [{'ip_protocol': '-1', 'ip_ranges': [], 'ipv6_ranges': [], 'prefix_list_ids': [], 'user_id_group_pairs': [{'group_id': 'sg-0419c881ba5bc594a', 'user_id': '423754860743'}]}, {'from_port': 22, 'ip_protocol': 'tcp', 'ip_ranges': [], 'ipv6_ranges': [], 'prefix_list_ids': [], 'to_port': 22, 'user_id_group_pairs': [{'group_id': 'sg-05e4c8994c8400290', 'user_id': '423754860743'}]}], 'owner_id': '423754860743', 'group_id': 'sg-0505f4600a1a8355c', 'ip_permissions_egress': [{'ip_protocol': '-1', 'ip_ranges': [{'cidr_ip': '0.0.0.0/0'}], 'ipv6_ranges': [], 'prefix_list_ids': [], 'user_id_group_pairs': []}], 'vpc_id': 'vpc-03c873d2e3402e54e', 'tags': {}, 'failed': False}"
+# END ANSIBLE MANAGED BLOCK
