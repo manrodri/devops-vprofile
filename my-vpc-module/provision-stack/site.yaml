@@ -10,3 +10,6 @@
 - name: Deploy SQL file on Dbserver
   import_playbook: dbdeploy.yml
 
+- name: Setup Memcached service
+  import_playbook: memcache.yml
+
