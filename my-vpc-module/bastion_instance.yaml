@@ -4,7 +4,7 @@
   gather_facts: False
   module_defaults:
     group/aws:
-      aws_profile: jenkins
+      profile: jenkins
   tasks:
 
     - name: gather variables

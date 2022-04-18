@@ -3,7 +3,7 @@
   gather_facts: False
   module_defaults:
     group/aws:
-      aws_profile: jenkins
+      profile: jenkins
   tasks:
     - name: Import VPC Variables
       include_vars: vars/variables-setup
