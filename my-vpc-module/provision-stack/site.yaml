@@ -7,3 +7,6 @@
 - name: Setup dbserver
   import_playbook: db.yml
 
+- name: Deploy SQL file on Dbserver
+  import_playbook: dbdeploy.yml
+
