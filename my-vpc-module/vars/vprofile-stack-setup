@@ -1,0 +1,4 @@
+ubuntu_18_ami: ami-07d8796a2b0f8d29c
+
+# region
+region: "eu-west-1"

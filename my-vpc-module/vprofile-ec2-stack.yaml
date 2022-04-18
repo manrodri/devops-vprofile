@@ -1,0 +1,25 @@
+---
+
+- name: setup vprofile stack
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  module_defaults:
+      group/aws:
+        aws_profile: jenkins
+  tasks:
+
+    - name: Import EC2 setup
+      include_vars: vars/vprofile-stack-setup
+
+    - name: Create vprofile ec2 key
+      ec2_key:
+        name: vprofile-dev-key
+        region: "{{region}}"
+      register: key_out
+    - name: Save private key into file bastion-key.pem
+      copy:
+        content: "{{key_out.key.private_key}}"
+        dest: "./vprofile-dev-key.pem"
+        mode: 0400
+      when: key_out.changed
