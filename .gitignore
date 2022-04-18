@@ -1,5 +1,6 @@
 *.pem
 *.sql
 *.war
-.idea/
+.idea/*
 key-module/
+vars/
